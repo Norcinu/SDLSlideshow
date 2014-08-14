@@ -1,4 +1,5 @@
 #include "BaseFileImpl.h"
+#include <algorithm>
 
 vector<string> BaseFileImpl::getFilesFound()
 {

@@ -1,5 +1,10 @@
 #include "FileList.h"
+
+#if defined(__unix__) || defined(__linux__) || (defined(__APPLE__) && defined(__MACH__))
 #include "PosixFileImpl.h"
+#elif defined WIN32
+#include "WindowsFileImpl.h"
+#endif
 
 FileList::FileList()
 {
