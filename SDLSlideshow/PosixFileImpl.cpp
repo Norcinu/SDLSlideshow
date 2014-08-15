@@ -23,7 +23,7 @@ bool PosixFileImpl::scanDirectory(const std::string& dir_name)
     dirent *file = nullptr;
     while ((file = readdir(directory))) {
         if (file->d_name[0] != '.') {
-            std::cout << file->d_name << std::endl;
+            std::cout << "Found File: " << file->d_name << std::endl;
             _files_found.push_back(file->d_name);
         }
     }

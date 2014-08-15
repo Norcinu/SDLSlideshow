@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B03B26C11996BE1C0082DD1C /* BaseFileImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03B26C01996BE1C0082DD1C /* BaseFileImpl.cpp */; };
+		B0B318F7199D568900A70B99 /* Visualisation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0B318F5199D568900A70B99 /* Visualisation.cpp */; };
+		B0B318F9199D5B2900A70B99 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B318F8199D5B2900A70B99 /* libSDL2_image.a */; };
+		B0B318FB199D5B3700A70B99 /* libSDL2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B318FA199D5B3700A70B99 /* libSDL2.a */; };
+		B0B318FD199D5B3B00A70B99 /* libSDL2main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B318FC199D5B3B00A70B99 /* libSDL2main.a */; };
+		B0B318FF199D5B4500A70B99 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B318FE199D5B4500A70B99 /* OpenGL.framework */; };
+		B0B31901199D5B4D00A70B99 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B31900199D5B4D00A70B99 /* Cocoa.framework */; };
 		B0ECFB1A19607D3B003BF1F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0ECFB1919607D3B003BF1F2 /* main.cpp */; };
 		B0ECFB1C19607D3B003BF1F2 /* SDLSlideshow.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = B0ECFB1B19607D3B003BF1F2 /* SDLSlideshow.1 */; };
 		B0ECFB2419607E4C003BF1F2 /* FileList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0ECFB2219607E4C003BF1F2 /* FileList.cpp */; };
@@ -29,6 +35,13 @@
 
 /* Begin PBXFileReference section */
 		B03B26C01996BE1C0082DD1C /* BaseFileImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseFileImpl.cpp; sourceTree = "<group>"; };
+		B0B318F5199D568900A70B99 /* Visualisation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Visualisation.cpp; sourceTree = "<group>"; };
+		B0B318F6199D568900A70B99 /* Visualisation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visualisation.h; sourceTree = "<group>"; };
+		B0B318F8199D5B2900A70B99 /* libSDL2_image.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2_image.a; path = ../../../../../usr/local/Cellar/sdl2_image/2.0.0/lib/libSDL2_image.a; sourceTree = "<group>"; };
+		B0B318FA199D5B3700A70B99 /* libSDL2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2.a; path = ../../../../../usr/local/Cellar/sdl2/2.0.2/lib/libSDL2.a; sourceTree = "<group>"; };
+		B0B318FC199D5B3B00A70B99 /* libSDL2main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSDL2main.a; path = ../../../../../usr/local/Cellar/sdl2/2.0.2/lib/libSDL2main.a; sourceTree = "<group>"; };
+		B0B318FE199D5B4500A70B99 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B0B31900199D5B4D00A70B99 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B0ECFB1619607D3B003BF1F2 /* SDLSlideshow */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SDLSlideshow; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0ECFB1919607D3B003BF1F2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		B0ECFB1B19607D3B003BF1F2 /* SDLSlideshow.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = SDLSlideshow.1; sourceTree = "<group>"; };
@@ -44,6 +57,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0B31901199D5B4D00A70B99 /* Cocoa.framework in Frameworks */,
+				B0B318FF199D5B4500A70B99 /* OpenGL.framework in Frameworks */,
+				B0B318FB199D5B3700A70B99 /* libSDL2.a in Frameworks */,
+				B0B318FD199D5B3B00A70B99 /* libSDL2main.a in Frameworks */,
+				B0B318F9199D5B2900A70B99 /* libSDL2_image.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +71,11 @@
 		B0ECFB0D19607D3B003BF1F2 = {
 			isa = PBXGroup;
 			children = (
+				B0B31900199D5B4D00A70B99 /* Cocoa.framework */,
+				B0B318FE199D5B4500A70B99 /* OpenGL.framework */,
+				B0B318FC199D5B3B00A70B99 /* libSDL2main.a */,
+				B0B318FA199D5B3700A70B99 /* libSDL2.a */,
+				B0B318F8199D5B2900A70B99 /* libSDL2_image.a */,
 				B0ECFB1819607D3B003BF1F2 /* SDLSlideshow */,
 				B0ECFB1719607D3B003BF1F2 /* Products */,
 			);
@@ -69,6 +92,8 @@
 		B0ECFB1819607D3B003BF1F2 /* SDLSlideshow */ = {
 			isa = PBXGroup;
 			children = (
+				B0B318F5199D568900A70B99 /* Visualisation.cpp */,
+				B0B318F6199D568900A70B99 /* Visualisation.h */,
 				B0ECFB251960AA50003BF1F2 /* FileImpls */,
 				B0ECFB1919607D3B003BF1F2 /* main.cpp */,
 				B0ECFB2219607E4C003BF1F2 /* FileList.cpp */,
@@ -144,6 +169,7 @@
 				B0ECFB281960AA6D003BF1F2 /* PosixFileImpl.cpp in Sources */,
 				B03B26C11996BE1C0082DD1C /* BaseFileImpl.cpp in Sources */,
 				B0ECFB2419607E4C003BF1F2 /* FileList.cpp in Sources */,
+				B0B318F7199D568900A70B99 /* Visualisation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +253,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/SDL2/2.0.2/include,
+					/usr/local/Cellar/SDL2_image/2.0.0/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/sdl2/2.0.2/lib,
+					/usr/local/Cellar/sdl2_image/2.0.0/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -239,6 +271,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/SDL2/2.0.2/include,
+					/usr/local/Cellar/SDL2_image/2.0.0/include,
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/sdl2/2.0.2/lib,
+					/usr/local/Cellar/sdl2_image/2.0.0/lib,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

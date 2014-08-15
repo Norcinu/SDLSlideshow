@@ -1,5 +1,5 @@
-#ifndef __SDLSlideshow__PosixFileImpl__
-#define __SDLSlideshow__PosixFileImpl__
+#ifndef POSIX_FILE_IMPL_H
+#define POSIX_FILE_IMPL_H
 
 #include "BaseFileImpl.h"
 
@@ -12,4 +12,4 @@ public:
     bool scanDirectory(const std::string& dir_name);
 };
 
-#endif /* defined(__SDLSlideshow__PosixFileImpl__) */
+#endif
