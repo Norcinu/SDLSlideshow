@@ -59,7 +59,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/steven/Pictures/Emilie copy"
+            argument = "/Users/steven/Pictures/Emilie\ copy/"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

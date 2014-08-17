@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B026EEC519A133C100839B03 /* Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B026EEC419A133C100839B03 /* Sprite.cpp */; };
 		B03B26C11996BE1C0082DD1C /* BaseFileImpl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B03B26C01996BE1C0082DD1C /* BaseFileImpl.cpp */; };
 		B0B318F7199D568900A70B99 /* Visualisation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B0B318F5199D568900A70B99 /* Visualisation.cpp */; };
 		B0B318F9199D5B2900A70B99 /* libSDL2_image.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B318F8199D5B2900A70B99 /* libSDL2_image.a */; };
@@ -34,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B026EEC319A133BC00839B03 /* Sprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sprite.hpp; sourceTree = "<group>"; };
+		B026EEC419A133C100839B03 /* Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sprite.cpp; sourceTree = "<group>"; };
 		B03B26C01996BE1C0082DD1C /* BaseFileImpl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BaseFileImpl.cpp; sourceTree = "<group>"; };
 		B0B318F5199D568900A70B99 /* Visualisation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Visualisation.cpp; sourceTree = "<group>"; };
 		B0B318F6199D568900A70B99 /* Visualisation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visualisation.h; sourceTree = "<group>"; };
@@ -92,6 +95,8 @@
 		B0ECFB1819607D3B003BF1F2 /* SDLSlideshow */ = {
 			isa = PBXGroup;
 			children = (
+				B026EEC419A133C100839B03 /* Sprite.cpp */,
+				B026EEC319A133BC00839B03 /* Sprite.hpp */,
 				B0B318F5199D568900A70B99 /* Visualisation.cpp */,
 				B0B318F6199D568900A70B99 /* Visualisation.h */,
 				B0ECFB251960AA50003BF1F2 /* FileImpls */,
@@ -167,6 +172,7 @@
 			files = (
 				B0ECFB1A19607D3B003BF1F2 /* main.cpp in Sources */,
 				B0ECFB281960AA6D003BF1F2 /* PosixFileImpl.cpp in Sources */,
+				B026EEC519A133C100839B03 /* Sprite.cpp in Sources */,
 				B03B26C11996BE1C0082DD1C /* BaseFileImpl.cpp in Sources */,
 				B0ECFB2419607E4C003BF1F2 /* FileList.cpp in Sources */,
 				B0B318F7199D568900A70B99 /* Visualisation.cpp in Sources */,
@@ -254,7 +260,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/Cellar/SDL2/2.0.2/include,
-					/usr/local/Cellar/SDL2_image/2.0.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/sdl2/2.0.2/lib,
@@ -272,7 +277,6 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					/usr/local/Cellar/SDL2/2.0.2/include,
-					/usr/local/Cellar/SDL2_image/2.0.0/include,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					/usr/local/Cellar/sdl2/2.0.2/lib,

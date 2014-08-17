@@ -1,6 +1,7 @@
 #include "Visualisation.h"
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
+#include "Sprite.hpp"
 
 Visualisation::Visualisation()
 {
@@ -41,14 +42,23 @@ bool Visualisation::init()
     SDL_GetDisplayBounds(0, &dim);
     _screen_height = dim.h;
     _screen_width = dim.w;
-    _window = SDL_CreateWindow("SDL Slideshow", 10, 10, _screen_width, _screen_height, SDL_WINDOW_OPENGL|SDL_WINDOW_FULLSCREEN);
+    _window = SDL_CreateWindow("SDL Slideshow", 10, 10, _screen_width, _screen_height, SDL_WINDOW_OPENGL);
     _renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
     SDL_SetRenderDrawColor(_renderer, 255, 0, 128, 255);
+    
     return true;
 }
 
 bool Visualisation::loadSprite(const std::string &filename)
 {
+    Sprite *sprite = new Sprite(_renderer);
+    if (!sprite->init(filename)) {
+        delete sprite;
+        return false;
+    }
+    
+    _sprites.push_back(sprite);
+    
     return true;
 }
 

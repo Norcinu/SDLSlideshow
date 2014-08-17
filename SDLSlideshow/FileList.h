@@ -20,7 +20,7 @@ public:
     bool scanDirectory();
     std::string getDirectory() const { return _directory; }
     void setDirectory(const std::string &dir) { _directory = dir; }
-
+    vector<string> getFiles() const { return _files; }
 
 private:
     bool _scan_recursive;

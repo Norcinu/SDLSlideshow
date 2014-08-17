@@ -32,6 +32,7 @@ FileList::FileList(const char *dir_name, const bool recursive_scan)
 bool FileList::scanDirectory()
 {
     _impl->scanDirectory(_directory);
+    _files = _impl->getFilesFound();
     return true;
 }
 

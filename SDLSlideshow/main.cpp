@@ -5,6 +5,8 @@
 #include <SDL2/SDL.h>
 
 using std::shared_ptr;
+using std::cout;
+using std::endl;
 
 int main(int argc, const char * argv[])
 {
@@ -13,6 +15,13 @@ int main(int argc, const char * argv[])
     
     Visualisation vis;
     vis.init();
+    
+    auto files = _file_list->getFiles();
+    for (auto f : files) {
+        if (!vis.loadSprite(f)) {
+            return 1;
+        }
+    }
     
     bool running = true;
     SDL_Event event;
