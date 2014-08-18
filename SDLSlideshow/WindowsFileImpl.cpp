@@ -26,7 +26,7 @@ bool WindowsFileImpl::scanDirectory(const std::string& dir_name)
 	}
 	else {
 		if (CheckFileIsImage(file_data))
-			_files_found.push_back(dir_name + file_data.cFileName);
+			_files_found.push_back(_root_directory + file_data.cFileName);
 
 		while (FindNextFile(file_handle, &file_data) != 0) {
 			FILETIME ft = file_data.ftCreationTime;
@@ -37,7 +37,7 @@ bool WindowsFileImpl::scanDirectory(const std::string& dir_name)
 				std::cout << "Found a directory: " << file_data.cFileName << std::endl;
 			else {
 				if (CheckFileIsImage(file_data))
-					_files_found.push_back(dir_name + file_data.cFileName);
+					_files_found.push_back(_root_directory + file_data.cFileName);
 			}
 		}
 		FindClose(file_handle);

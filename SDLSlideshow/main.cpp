@@ -20,11 +20,9 @@ int main(int argc, const char *argv[])
     vis.init();
     
     auto files = _file_list->getFiles();
-/*    for (auto f : files) {
-        if (!vis.loadSprite(f)) {
-            return 1;
-        }
-    }*/
+	for (auto it = files.begin(); it != files.end(); it++)
+		if (!vis.loadSprite(*it))
+			return 1;
     
     bool running = true;
     SDL_Event event;
