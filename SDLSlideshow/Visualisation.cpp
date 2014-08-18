@@ -31,7 +31,7 @@ bool Visualisation::init()
     if (IMG_Init(IMG_INIT_JPG|IMG_INIT_PNG) == -1)
         return false;
     
-    uint window_args = 0;
+    unsigned int window_args = 0;
     if (_fullscreen) {
         window_args = SDL_WINDOW_FULLSCREEN_DESKTOP;
     } else {

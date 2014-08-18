@@ -39,6 +39,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\SDL2\include\;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\SDL2\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -54,6 +56,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,11 +80,15 @@
     <ClCompile Include="..\..\SDLSlideshow\BaseFileImpl.cpp" />
     <ClCompile Include="..\..\SDLSlideshow\FileList.cpp" />
     <ClCompile Include="..\..\SDLSlideshow\main.cpp" />
+    <ClCompile Include="..\..\SDLSlideshow\Sprite.cpp" />
+    <ClCompile Include="..\..\SDLSlideshow\Visualisation.cpp" />
     <ClCompile Include="..\..\SDLSlideshow\WindowsFileImpl.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\SDLSlideshow\BaseFileImpl.h" />
     <ClInclude Include="..\..\SDLSlideshow\FileList.h" />
+    <ClInclude Include="..\..\SDLSlideshow\Sprite.hpp" />
+    <ClInclude Include="..\..\SDLSlideshow\Visualisation.h" />
     <ClInclude Include="..\..\SDLSlideshow\WindowsFileImpl.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

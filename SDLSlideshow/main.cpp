@@ -3,12 +3,15 @@
 #include "FileList.h"
 #include "Visualisation.h"
 #include <SDL2/SDL.h>
+#undef main
 
 using std::shared_ptr;
 using std::cout;
 using std::endl;
 
-int main(int argc, const char * argv[])
+int main(int argc, const char *argv[]);
+
+int main(int argc, const char *argv[])
 {
     shared_ptr<FileList> _file_list(new FileList(argv[1], false));
     _file_list->scanDirectory();
@@ -17,11 +20,11 @@ int main(int argc, const char * argv[])
     vis.init();
     
     auto files = _file_list->getFiles();
-    for (auto f : files) {
+/*    for (auto f : files) {
         if (!vis.loadSprite(f)) {
             return 1;
         }
-    }
+    }*/
     
     bool running = true;
     SDL_Event event;
