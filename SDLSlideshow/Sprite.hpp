@@ -11,12 +11,13 @@ public:
     ~Sprite();
 
     bool init(const std::string& filename);
+    void render(const int x, const int y);
     
 private:
     SDL_Renderer *_renderer;
     SDL_Texture *_texture;
-    int x;
-    int y;
+    int _x;
+    int _y;
     std::string _filename;
 };
 

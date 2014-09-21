@@ -26,7 +26,7 @@ Visualisation::~Visualisation()
 
 bool Visualisation::init()
 {
-    if (SDL_Init(SDL_INIT_EVERYTHING) == -1)
+    if (SDL_Init(SDL_INIT_VIDEO) == -1)
         return false;
     if (IMG_Init(IMG_INIT_JPG|IMG_INIT_PNG) == -1)
         return false;
@@ -42,20 +42,18 @@ bool Visualisation::init()
     SDL_GetDisplayBounds(0, &dim);
     _screen_height = dim.h;
     _screen_width = dim.w;
-    _window = SDL_CreateWindow("SDL Slideshow", 10, 10, _screen_width, _screen_height, SDL_WINDOW_OPENGL);
+    _window = SDL_CreateWindow("SDL Slideshow", 0, 0, _screen_width, _screen_height, SDL_WINDOW_OPENGL);
     _renderer = SDL_CreateRenderer(_window, -1, SDL_RENDERER_ACCELERATED|SDL_RENDERER_PRESENTVSYNC);
     SDL_SetRenderDrawColor(_renderer, 255, 0, 128, 255);
-    
+
     return true;
 }
 
 bool Visualisation::loadSprite(const std::string &filename)
 {
-    Sprite *sprite = new Sprite(_renderer);
-    if (!sprite->init(filename)) {
-        delete sprite;
+    shared_ptr<Sprite> sprite(new Sprite(_renderer));
+    if (!sprite->init(filename))
         return false;
-    }
     
     _sprites.push_back(sprite);
     
@@ -64,7 +62,7 @@ bool Visualisation::loadSprite(const std::string &filename)
 
 void Visualisation::begin()
 {
-    SDL_SetRenderDrawColor(_renderer, 255, 0, 128, 255);
+    SDL_SetRenderDrawColor(_renderer, 128, 128, 128, 255);
     SDL_RenderClear(_renderer);
 }
 
@@ -75,5 +73,5 @@ void Visualisation::end()
 
 void Visualisation::drawSprite(const int id)
 {
-    
+    _sprites[id]->render(5,5);
 }

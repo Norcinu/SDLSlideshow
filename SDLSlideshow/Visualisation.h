@@ -3,8 +3,10 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 
 using std::vector;
+using std::shared_ptr;
 
 struct SDL_Window;
 struct SDL_Renderer;
@@ -26,13 +28,15 @@ public:
     bool getFullScreen() const { return _fullscreen; }
     void setFullScreen(const bool fs) { _fullscreen = fs; }
     
+    size_t getSpriteCount() const { return _sprites.size()-1; }
+    
 private:
     bool _fullscreen;
     unsigned int _screen_height;
     unsigned int _screen_width;
     SDL_Window *_window;
     SDL_Renderer *_renderer;
-    vector<Sprite *> _sprites;
+    vector<shared_ptr<Sprite>> _sprites;
 };
 
 #endif
